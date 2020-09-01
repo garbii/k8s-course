@@ -21,6 +21,7 @@ FROM node:6-alpine
   #  so it will respond to http://localhost:80 on your computer
 EXPOSE 3000
 # - then it should use alpine package manager to install tini: 'apk add --update tini'
+RUN apk add --update tini
 # - then it should create directory /usr/src/app for app files with 'mkdir -p /usr/src/app'
 RUN mkdir -p /usr/src/app
 # - Node uses a "package manager", so it needs to copy in package.json file
